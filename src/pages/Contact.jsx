@@ -49,7 +49,7 @@ const Contact = () => {
     {
       icon: FaMapMarkerAlt,
       title: 'Location',
-      content: 'Elk Grove, CA',
+      content: 'Mexico City, Mexico',
       link: '#',
     },
     {
@@ -62,10 +62,10 @@ const Contact = () => {
 
   const officeLocations = [
     {
-      city: 'Elk Grove',
-      country: 'United States',
-      address: '9964 Spring View Way',
-      zip: 'CA 95757',
+      city: 'Mexico City',
+      country: 'Mexico',
+      address: 'Paseo de la Reforma 222',
+      zip: 'CDMX 06600',
     },
   ];
 

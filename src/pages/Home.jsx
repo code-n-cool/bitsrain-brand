@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { FaHospital, FaChartLine, FaShoppingCart, FaCloud, FaLaptopCode, FaMobileAlt, FaGlobe, FaBrain, FaPalette, FaRocket, FaClock, FaSmile, FaStar, FaBolt, FaMagic, FaGem } from 'react-icons/fa';
+import { FaHospital, FaChartLine, FaShoppingCart, FaCloud, FaLaptopCode, FaMobileAlt, FaGlobe, FaBrain, FaPalette, FaBolt, FaMagic, FaGem, FaCheckCircle, FaAward, FaUsers, FaTrophy } from 'react-icons/fa';
 
 const Home = () => {
   const [typedText, setTypedText] = useState('');
@@ -47,10 +47,10 @@ const Home = () => {
   ];
 
   const stats = [
-    { number: '150+', label: 'Projects Delivered', icon: FaRocket },
-    { number: '12+', label: 'Years Experience', icon: FaClock },
-    { number: '50+', label: 'Happy Clients', icon: FaSmile },
-    { number: '98%', label: 'Client Satisfaction', icon: FaStar },
+    { number: '15+', label: 'Projects Delivered', icon: FaCheckCircle },
+    { number: '3+', label: 'Years Experience', icon: FaAward },
+    { number: '10+', label: 'Happy Clients', icon: FaUsers },
+    { number: '98%', label: 'Client Satisfaction', icon: FaTrophy },
   ];
 
   const services = [
@@ -174,7 +174,7 @@ const Home = () => {
                   key={index} 
                   className="text-center group cursor-pointer transform hover:scale-110 transition-all duration-300"
                 >
-                  <div className="text-5xl mb-2 group-hover:animate-bounce"><IconComponent /></div>
+                  <div className="text-5xl mb-2 text-primary-600 group-hover:animate-bounce"><IconComponent /></div>
                   <div className="text-4xl md:text-5xl font-bold text-primary-600 mb-2 group-hover:text-secondary-600 transition-colors">
                     {stat.number}
                   </div>
@@ -234,9 +234,9 @@ const Home = () => {
               return (
                 <div 
                   key={index} 
-                  className="card p-8 group cursor-pointer hover:shadow-2xl transition-all duration-500 border-2 border-transparent hover:border-primary-500 transform hover:-translate-y-2"
+                  className="card p-8 group cursor-pointer hover:shadow-2xl transition-all duration-300 border-2 border-transparent hover:border-primary-500"
                 >
-                  <div className="text-5xl mb-4 text-primary-600 group-hover:scale-125 transition-transform duration-300"><IconComponent /></div>
+                  <div className="text-5xl mb-4 text-primary-600 transition-colors duration-300"><IconComponent /></div>
                   <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-primary-600 transition-colors">{service.title}</h3>
                   <p className="text-gray-600 mb-4">{service.description}</p>
                   <div className="w-16 h-1 bg-primary-600 group-hover:w-full transition-all duration-500"></div>

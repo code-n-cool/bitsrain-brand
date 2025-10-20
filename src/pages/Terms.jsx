@@ -124,7 +124,7 @@ const Terms = () => {
             <ul className="list-none mb-6 text-gray-700 space-y-2">
               <li><strong>Email:</strong> danny@bitsrain.com</li>
               <li><strong>Phone:</strong> +1 312 680 2246</li>
-              <li><strong>Address:</strong> 9964 Spring View Way, Elk Grove, CA 95757</li>
+              <li><strong>Address:</strong> Paseo de la Reforma 222, Mexico City, CDMX 06600, Mexico</li>
             </ul>
           </div>
         </div>
