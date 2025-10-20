@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { FaLaptopCode, FaPalette, FaChartBar, FaCheckCircle, FaCog, FaGlobeAmericas, FaDollarSign, FaHeart, FaBookOpen, FaRocket, FaGift, FaBolt, FaMagic, FaBullseye } from 'react-icons/fa';
 
 const Team = () => {
   const leadership = [
@@ -22,43 +23,43 @@ const Team = () => {
   ];
 
   const departments = [
-    { name: 'Engineering', count: 8, icon: '💻' },
-    { name: 'Design', count: 5, icon: '🎨' },
-    { name: 'Product', count: 2, icon: '📊' },
-    { name: 'QA', count: 3, icon: '✅' },
-    { name: 'DevOps', count: 3, icon: '⚙️' },
+    { name: 'Engineering', count: 8, icon: FaLaptopCode },
+    { name: 'Design', count: 5, icon: FaPalette },
+    { name: 'Product', count: 2, icon: FaChartBar },
+    { name: 'QA', count: 3, icon: FaCheckCircle },
+    { name: 'DevOps', count: 3, icon: FaCog },
   ];
 
   const benefits = [
     {
       title: 'Remote-First Culture',
       description: 'Work from anywhere in the world with flexible hours',
-      icon: '🌍',
+      icon: FaGlobeAmericas,
     },
     {
       title: 'Competitive Compensation',
       description: 'Industry-leading salaries and equity packages',
-      icon: '💰',
+      icon: FaDollarSign,
     },
     {
       title: 'Health & Wellness',
       description: 'Comprehensive health insurance and wellness programs',
-      icon: '❤️',
+      icon: FaHeart,
     },
     {
       title: 'Learning & Development',
       description: 'Annual learning budget and conference attendance',
-      icon: '📚',
+      icon: FaBookOpen,
     },
     {
       title: 'Latest Technology',
       description: 'Work with cutting-edge tools and technologies',
-      icon: '🚀',
+      icon: FaRocket,
     },
     {
       title: 'Team Activities',
       description: 'Regular team building and social events',
-      icon: '🎉',
+      icon: FaGift,
     },
   ];
 
@@ -77,13 +78,13 @@ const Team = () => {
           <div className="max-w-4xl mx-auto text-center">
             <div className="flex justify-center gap-4 mb-6 flex-wrap">
               <span className="px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-sm font-semibold flex items-center gap-2">
-                ⚡ Fast Delivery
+                <FaBolt /> Fast Delivery
               </span>
               <span className="px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-sm font-semibold flex items-center gap-2">
-                ✨ High Quality
+                <FaMagic /> High Quality
               </span>
               <span className="px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-sm font-semibold flex items-center gap-2">
-                🚀 Innovation-Driven
+                <FaRocket /> Innovation-Driven
               </span>
             </div>
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
@@ -149,21 +150,21 @@ const Team = () => {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             <div className="card p-8 text-center">
-              <div className="text-6xl mb-4">⚡</div>
+              <div className="text-6xl mb-4 text-primary-600"><FaBolt /></div>
               <h3 className="text-2xl font-bold text-gray-900 mb-3">Fast Delivery</h3>
               <p className="text-gray-600">
                 Rapid development cycles with agile methodologies. We deliver quality software faster than traditional agencies.
               </p>
             </div>
             <div className="card p-8 text-center">
-              <div className="text-6xl mb-4">✨</div>
+              <div className="text-6xl mb-4 text-primary-600"><FaMagic /></div>
               <h3 className="text-2xl font-bold text-gray-900 mb-3">High Quality</h3>
               <p className="text-gray-600">
                 Enterprise-grade code standards, comprehensive testing, and meticulous attention to detail in every project.
               </p>
             </div>
             <div className="card p-8 text-center">
-              <div className="text-6xl mb-4">🎯</div>
+              <div className="text-6xl mb-4 text-primary-600"><FaBullseye /></div>
               <h3 className="text-2xl font-bold text-gray-900 mb-3">Client-Focused</h3>
               <p className="text-gray-600">
                 Your success is our priority. We work closely with you to ensure every solution exceeds expectations.
@@ -186,7 +187,7 @@ const Team = () => {
           <div className="grid grid-cols-2 md:grid-cols-5 gap-6">
             {departments.map((dept, index) => (
               <div key={index} className="card p-6 text-center">
-                <div className="text-5xl mb-3">{dept.icon}</div>
+                <div className="text-5xl mb-3 text-primary-600"><dept.icon /></div>
                 <h3 className="font-bold text-gray-900 mb-1">{dept.name}</h3>
                 <p className="text-3xl font-bold text-primary-600">{dept.count}</p>
               </div>
@@ -208,7 +209,7 @@ const Team = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {benefits.map((benefit, index) => (
               <div key={index} className="card p-8">
-                <div className="text-5xl mb-4">{benefit.icon}</div>
+                <div className="text-5xl mb-4 text-primary-600"><benefit.icon /></div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3">{benefit.title}</h3>
                 <p className="text-gray-600">{benefit.description}</p>
               </div>

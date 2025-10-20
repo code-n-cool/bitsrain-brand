@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { FaTwitter, FaLinkedin, FaGithub, FaInstagram } from 'react-icons/fa';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -33,10 +34,10 @@ const Footer = () => {
   ];
 
   const socialLinks = [
-    { name: 'Twitter', icon: '𝕏', url: 'https://x.com/bitsrain' },
-    { name: 'LinkedIn', icon: 'in', url: 'https://linkedin.com/company/bitsrain' },
-    { name: 'GitHub', icon: '⚡', url: 'https://github.com/bitsrain' },
-    { name: 'Instagram', icon: '📷', url: 'https://instagram.com/bitsrain' },
+    { name: 'Twitter', icon: FaTwitter, url: 'https://x.com/bitsrain' },
+    { name: 'LinkedIn', icon: FaLinkedin, url: 'https://linkedin.com/company/bitsrain' },
+    { name: 'GitHub', icon: FaGithub, url: 'https://github.com/bitsrain' },
+    { name: 'Instagram', icon: FaInstagram, url: 'https://instagram.com/bitsrain' },
   ];
 
   return (
@@ -56,16 +57,19 @@ const Footer = () => {
               We transform ideas into powerful digital solutions. Specializing in healthcare, fintech, e-commerce, and SaaS development.
             </p>
             <div className="flex space-x-4">
-              {socialLinks.map((social) => (
-                <a
-                  key={social.name}
-                  href={social.url}
-                  className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-primary-600 transition-colors duration-300"
-                  aria-label={social.name}
-                >
-                  <span className="text-sm font-bold">{social.icon}</span>
-                </a>
-              ))}
+              {socialLinks.map((social) => {
+                const IconComponent = social.icon;
+                return (
+                  <a
+                    key={social.name}
+                    href={social.url}
+                    className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-primary-600 transition-colors duration-300"
+                    aria-label={social.name}
+                  >
+                    <IconComponent />
+                  </a>
+                );
+              })}
             </div>
           </div>
 

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaBriefcase, FaBolt, FaMagic } from 'react-icons/fa';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -34,25 +35,25 @@ const Contact = () => {
 
   const contactInfo = [
     {
-      icon: '📧',
+      icon: FaEnvelope,
       title: 'Email',
       content: 'danny@bitsrain.com',
       link: 'mailto:danny@bitsrain.com',
     },
     {
-      icon: '📱',
+      icon: FaPhone,
       title: 'Phone',
       content: '+1 312 680 2246',
       link: 'tel:+13126802246',
     },
     {
-      icon: '📍',
+      icon: FaMapMarkerAlt,
       title: 'Location',
       content: 'Elk Grove, CA',
       link: '#',
     },
     {
-      icon: '💼',
+      icon: FaBriefcase,
       title: 'Careers',
       content: 'danny@bitsrain.com',
       link: 'mailto:danny@bitsrain.com',
@@ -109,13 +110,13 @@ const Contact = () => {
           <div className="max-w-4xl mx-auto text-center">
             <div className="flex justify-center gap-4 mb-6 flex-wrap">
               <span className="px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-sm font-semibold flex items-center gap-2">
-                ⚡ Fast Response
+                <FaBolt /> Fast Response
               </span>
               <span className="px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-sm font-semibold flex items-center gap-2">
-                ✨ Expert Team
+                <FaMagic /> Expert Team
               </span>
               <span className="px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-sm font-semibold flex items-center gap-2">
-                💼 Professional Service
+                <FaBriefcase /> Professional Service
               </span>
             </div>
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
@@ -276,19 +277,22 @@ const Contact = () => {
               </p>
 
               <div className="space-y-6 mb-12">
-                {contactInfo.map((info, index) => (
-                  <a
-                    key={index}
-                    href={info.link}
-                    className="flex items-start p-6 bg-gray-50 rounded-xl hover:bg-primary-50 transition-colors"
-                  >
-                    <div className="text-4xl mr-4">{info.icon}</div>
-                    <div>
-                      <div className="font-semibold text-gray-900 mb-1">{info.title}</div>
-                      <div className="text-primary-600">{info.content}</div>
-                    </div>
-                  </a>
-                ))}
+                {contactInfo.map((info, index) => {
+                  const IconComponent = info.icon;
+                  return (
+                    <a
+                      key={index}
+                      href={info.link}
+                      className="flex items-start p-6 bg-gray-50 rounded-xl hover:bg-primary-50 transition-colors"
+                    >
+                      <div className="text-4xl mr-4 text-primary-600"><IconComponent /></div>
+                      <div>
+                        <div className="font-semibold text-gray-900 mb-1">{info.title}</div>
+                        <div className="text-primary-600">{info.content}</div>
+                      </div>
+                    </a>
+                  );
+                })}
               </div>
 
               <div className="card p-8">

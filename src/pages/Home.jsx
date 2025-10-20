@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { FaHospital, FaChartLine, FaShoppingCart, FaCloud, FaLaptopCode, FaMobileAlt, FaGlobe, FaBrain, FaPalette, FaRocket, FaClock, FaSmile, FaStar, FaBolt, FaMagic, FaGem } from 'react-icons/fa';
 
 const Home = () => {
   const [typedText, setTypedText] = useState('');
@@ -22,71 +23,71 @@ const Home = () => {
     {
       title: 'Healthcare',
       description: 'HIPAA-compliant solutions for modern healthcare delivery',
-      icon: '🏥',
+      icon: FaHospital,
       gradient: 'from-blue-500 to-cyan-500',
     },
     {
       title: 'Fintech',
       description: 'Secure and scalable financial technology platforms',
-      icon: '💰',
+      icon: FaChartLine,
       gradient: 'from-green-500 to-emerald-500',
     },
     {
       title: 'E-commerce',
       description: 'High-performance online retail experiences',
-      icon: '🛒',
+      icon: FaShoppingCart,
       gradient: 'from-purple-500 to-pink-500',
     },
     {
       title: 'SaaS',
       description: 'Cloud-based software solutions that scale',
-      icon: '☁️',
+      icon: FaCloud,
       gradient: 'from-orange-500 to-red-500',
     },
   ];
 
   const stats = [
-    { number: '150+', label: 'Projects Delivered', icon: '🚀' },
-    { number: '12+', label: 'Years Experience', icon: '⏱️' },
-    { number: '50+', label: 'Happy Clients', icon: '😊' },
-    { number: '98%', label: 'Client Satisfaction', icon: '⭐' },
+    { number: '150+', label: 'Projects Delivered', icon: FaRocket },
+    { number: '12+', label: 'Years Experience', icon: FaClock },
+    { number: '50+', label: 'Happy Clients', icon: FaSmile },
+    { number: '98%', label: 'Client Satisfaction', icon: FaStar },
   ];
 
   const services = [
     {
       title: 'Custom Software Development',
       description: 'Tailored solutions built from the ground up to meet your unique business needs.',
-      icon: '💻',
+      icon: FaLaptopCode,
       color: 'blue',
     },
     {
       title: 'Mobile App Development',
       description: 'Native and cross-platform mobile applications for iOS and Android.',
-      icon: '📱',
+      icon: FaMobileAlt,
       color: 'purple',
     },
     {
       title: 'Web Development',
       description: 'Modern, responsive web applications using cutting-edge technologies.',
-      icon: '🌐',
+      icon: FaGlobe,
       color: 'cyan',
     },
     {
       title: 'Cloud Solutions',
       description: 'Scalable cloud infrastructure and DevOps implementation.',
-      icon: '☁️',
+      icon: FaCloud,
       color: 'indigo',
     },
     {
       title: 'AI & Machine Learning',
       description: 'Intelligent solutions powered by artificial intelligence and ML algorithms.',
-      icon: '🤖',
+      icon: FaBrain,
       color: 'pink',
     },
     {
       title: 'UI/UX Design',
       description: 'Beautiful, intuitive interfaces that users love to interact with.',
-      icon: '🎨',
+      icon: FaPalette,
       color: 'orange',
     },
   ];
@@ -128,13 +129,13 @@ const Home = () => {
           <div className="max-w-4xl mx-auto text-center">
             <div className="flex justify-center gap-3 mb-6 flex-wrap animate-fade-in">
               <span className="px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-sm font-semibold flex items-center gap-2">
-                ⚡ Fast Delivery
+                <FaBolt /> Fast Delivery
               </span>
               <span className="px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-sm font-semibold flex items-center gap-2">
-                ✨ High Quality
+                <FaMagic /> High Quality
               </span>
               <span className="px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-sm font-semibold flex items-center gap-2">
-                💎 Enterprise-Grade
+                <FaGem /> Enterprise-Grade
               </span>
             </div>
             <h1 className="text-4xl md:text-6xl font-bold mb-6 min-h-[120px]">
@@ -166,18 +167,21 @@ const Home = () => {
       <section className="py-16 bg-white">
         <div className="section-container">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
-              <div 
-                key={index} 
-                className="text-center group cursor-pointer transform hover:scale-110 transition-all duration-300"
-              >
-                <div className="text-5xl mb-2 group-hover:animate-bounce">{stat.icon}</div>
-                <div className="text-4xl md:text-5xl font-bold text-primary-600 mb-2 group-hover:text-secondary-600 transition-colors">
-                  {stat.number}
+            {stats.map((stat, index) => {
+              const IconComponent = stat.icon;
+              return (
+                <div 
+                  key={index} 
+                  className="text-center group cursor-pointer transform hover:scale-110 transition-all duration-300"
+                >
+                  <div className="text-5xl mb-2 group-hover:animate-bounce"><IconComponent /></div>
+                  <div className="text-4xl md:text-5xl font-bold text-primary-600 mb-2 group-hover:text-secondary-600 transition-colors">
+                    {stat.number}
+                  </div>
+                  <div className="text-gray-600 font-medium">{stat.label}</div>
                 </div>
-                <div className="text-gray-600 font-medium">{stat.label}</div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
@@ -194,18 +198,21 @@ const Home = () => {
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {industries.map((industry, index) => (
-              <div 
-                key={index} 
-                className="card p-8 text-center group cursor-pointer hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2"
-              >
-                <div className={`w-20 h-20 mx-auto mb-4 rounded-full bg-gradient-to-br ${industry.gradient} flex items-center justify-center text-4xl group-hover:scale-110 transition-transform duration-300`}>
-                  {industry.icon}
+            {industries.map((industry, index) => {
+              const IconComponent = industry.icon;
+              return (
+                <div 
+                  key={index} 
+                  className="card p-8 text-center group cursor-pointer hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2"
+                >
+                  <div className={`w-20 h-20 mx-auto mb-4 rounded-full bg-gradient-to-br ${industry.gradient} flex items-center justify-center text-4xl text-white group-hover:scale-110 transition-transform duration-300`}>
+                    <IconComponent />
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-primary-600 transition-colors">{industry.title}</h3>
+                  <p className="text-gray-600">{industry.description}</p>
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-primary-600 transition-colors">{industry.title}</h3>
-                <p className="text-gray-600">{industry.description}</p>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
@@ -222,17 +229,20 @@ const Home = () => {
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((service, index) => (
-              <div 
-                key={index} 
-                className="card p-8 group cursor-pointer hover:shadow-2xl transition-all duration-500 border-2 border-transparent hover:border-primary-500 transform hover:-translate-y-2"
-              >
-                <div className="text-5xl mb-4 group-hover:scale-125 transition-transform duration-300">{service.icon}</div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-primary-600 transition-colors">{service.title}</h3>
-                <p className="text-gray-600 mb-4">{service.description}</p>
-                <div className="w-16 h-1 bg-primary-600 group-hover:w-full transition-all duration-500"></div>
-              </div>
-            ))}
+            {services.map((service, index) => {
+              const IconComponent = service.icon;
+              return (
+                <div 
+                  key={index} 
+                  className="card p-8 group cursor-pointer hover:shadow-2xl transition-all duration-500 border-2 border-transparent hover:border-primary-500 transform hover:-translate-y-2"
+                >
+                  <div className="text-5xl mb-4 text-primary-600 group-hover:scale-125 transition-transform duration-300"><IconComponent /></div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-primary-600 transition-colors">{service.title}</h3>
+                  <p className="text-gray-600 mb-4">{service.description}</p>
+                  <div className="w-16 h-1 bg-primary-600 group-hover:w-full transition-all duration-500"></div>
+                </div>
+              );
+            })}
           </div>
           <div className="text-center mt-12">
             <Link to="/services" className="btn-primary transform hover:scale-105 transition-all duration-300">

@@ -1,27 +1,28 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { FaLightbulb, FaStar, FaHandshake, FaRocket, FaBolt, FaMagic, FaTrophy } from 'react-icons/fa';
 
 const About = () => {
   const values = [
     {
       title: 'Innovation First',
       description: 'We stay ahead of technology trends to deliver cutting-edge solutions that give our clients a competitive advantage.',
-      icon: '💡',
+      icon: FaLightbulb,
     },
     {
       title: 'Quality Excellence',
       description: 'Every line of code we write undergoes rigorous testing and review to ensure the highest quality standards.',
-      icon: '⭐',
+      icon: FaStar,
     },
     {
       title: 'Client Partnership',
       description: 'We believe in building long-term relationships based on trust, transparency, and mutual success.',
-      icon: '🤝',
+      icon: FaHandshake,
     },
     {
       title: 'Agile Approach',
       description: 'Our flexible methodology allows us to adapt quickly to changing requirements and deliver value iteratively.',
-      icon: '🚀',
+      icon: FaRocket,
     },
   ];
 
@@ -58,13 +59,13 @@ const About = () => {
           <div className="max-w-4xl mx-auto text-center">
             <div className="flex justify-center gap-4 mb-6 flex-wrap">
               <span className="px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-sm font-semibold flex items-center gap-2">
-                ⚡ Fast Delivery
+                <FaBolt /> Fast Delivery
               </span>
               <span className="px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-sm font-semibold flex items-center gap-2">
-                ✨ High Quality
+                <FaMagic /> High Quality
               </span>
               <span className="px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-sm font-semibold flex items-center gap-2">
-                🏆 Award-Winning
+                <FaTrophy /> Award-Winning
               </span>
             </div>
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
@@ -118,13 +119,16 @@ const About = () => {
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {values.map((value, index) => (
-              <div key={index} className="card p-8 text-center">
-                <div className="text-6xl mb-4">{value.icon}</div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">{value.title}</h3>
-                <p className="text-gray-600">{value.description}</p>
-              </div>
-            ))}
+            {values.map((value, index) => {
+              const IconComponent = value.icon;
+              return (
+                <div key={index} className="card p-8 text-center">
+                  <div className="text-6xl mb-4 text-primary-600"><IconComponent /></div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">{value.title}</h3>
+                  <p className="text-gray-600">{value.description}</p>
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>
