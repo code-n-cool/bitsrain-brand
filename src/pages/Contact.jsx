@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaBriefcase, FaBolt, FaMagic } from 'react-icons/fa';
+import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaBriefcase, FaBolt, FaMagic, FaTelegram } from 'react-icons/fa';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -51,6 +51,12 @@ const Contact = () => {
       title: 'Location',
       content: 'Mexico City, Mexico',
       link: '#',
+    },
+    {
+      icon: FaTelegram,
+      title: 'Telegram',
+      content: 'Join our channel',
+      link: 'https://t.me/+CKgPsUGnuok1ZWEy',
     },
     {
       icon: FaBriefcase,

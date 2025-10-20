@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { FaTwitter, FaLinkedin, FaGithub, FaInstagram } from 'react-icons/fa';
+import { FaTwitter, FaLinkedin, FaGithub, FaInstagram, FaTelegram } from 'react-icons/fa';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -38,6 +38,7 @@ const Footer = () => {
     { name: 'LinkedIn', icon: FaLinkedin, url: 'https://linkedin.com/company/bitsrain' },
     { name: 'GitHub', icon: FaGithub, url: 'https://github.com/bitsrain' },
     { name: 'Instagram', icon: FaInstagram, url: 'https://instagram.com/bitsrain' },
+    { name: 'Telegram', icon: FaTelegram, url: 'https://t.me/+CKgPsUGnuok1ZWEy' },
   ];
 
   return (
