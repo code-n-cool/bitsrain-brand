@@ -45,9 +45,24 @@ const About = () => {
 
   return (
     <div className="pt-20">
-      <section className="gradient-bg text-white py-20">
-        <div className="section-container">
+      <section className="relative gradient-bg text-white py-20 overflow-hidden">
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-10 right-10 w-64 h-64 bg-white rounded-full blur-3xl"></div>
+          <div className="absolute bottom-10 left-10 w-64 h-64 bg-white rounded-full blur-3xl"></div>
+        </div>
+        <div className="section-container relative z-10">
           <div className="max-w-4xl mx-auto text-center">
+            <div className="flex justify-center gap-4 mb-6 flex-wrap">
+              <span className="px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-sm font-semibold flex items-center gap-2">
+                ⚡ Fast Delivery
+              </span>
+              <span className="px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-sm font-semibold flex items-center gap-2">
+                ✨ High Quality
+              </span>
+              <span className="px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-sm font-semibold flex items-center gap-2">
+                🏆 Award-Winning
+              </span>
+            </div>
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
               About BitsRain
             </h1>

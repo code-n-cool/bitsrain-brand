@@ -122,12 +122,23 @@ const Home = () => {
         </div>
         <div className="section-container relative z-10">
           <div className="max-w-4xl mx-auto text-center">
+            <div className="flex justify-center gap-3 mb-6 flex-wrap animate-fade-in">
+              <span className="px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-sm font-semibold flex items-center gap-2">
+                ⚡ Fast Delivery
+              </span>
+              <span className="px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-sm font-semibold flex items-center gap-2">
+                ✨ High Quality
+              </span>
+              <span className="px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-sm font-semibold flex items-center gap-2">
+                💎 Enterprise-Grade
+              </span>
+            </div>
             <h1 className="text-4xl md:text-6xl font-bold mb-6 min-h-[120px]">
               {typedText}
               <span className="animate-pulse">|</span>
             </h1>
             <p className="text-xl md:text-2xl mb-8 text-primary-100 animate-fade-in">
-              We craft exceptional software solutions for healthcare, fintech, e-commerce, and SaaS industries
+              Professional software agency delivering exceptional solutions for healthcare, fintech, e-commerce, and SaaS industries
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in">
               <Link 

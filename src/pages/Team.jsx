@@ -21,57 +21,6 @@ const Team = () => {
     },
   ];
 
-  const teamMembers = [
-    {
-      name: 'David Chen',
-      role: 'Senior Full-Stack Developer',
-      expertise: 'React, Node.js, AWS',
-      image: '/images/team/david-chen-anime.jpg',
-    },
-    {
-      name: 'Kevin Park',
-      role: 'Lead Mobile Developer',
-      expertise: 'React Native, iOS, Android',
-      image: '/images/team/kevin-park-unique.jpg',
-    },
-    {
-      name: 'Jason Wang',
-      role: 'Senior Backend Developer',
-      expertise: 'Python, Microservices, Kubernetes',
-      image: '/images/team/jason-wang-anime.jpg',
-    },
-    {
-      name: 'Jessica Kim',
-      role: 'Lead UI/UX Designer',
-      expertise: 'Figma, User Research, Design Systems',
-      image: '/images/team/sarah-choi.jpg',
-    },
-    {
-      name: 'Michelle Zhang',
-      role: 'Senior Product Designer',
-      expertise: 'UI Design, Prototyping, Branding',
-      image: '/images/team/michelle-zhang-anime.jpg',
-    },
-    {
-      name: 'Amanda Liu',
-      role: 'Senior Product Manager',
-      expertise: 'Agile, Strategy, Roadmapping',
-      image: '/images/team/amanda-liu-anime.jpg',
-    },
-    {
-      name: 'Alex Wong',
-      role: 'Lead QA Engineer',
-      expertise: 'Automation Testing, CI/CD',
-      image: '/images/team/alex-wong-anime.jpg',
-    },
-    {
-      name: 'Tony Lin',
-      role: 'Lead DevOps Engineer',
-      expertise: 'AWS, Kubernetes, Infrastructure',
-      image: '/images/team/tony-lin-anime.jpg',
-    },
-  ];
-
   const departments = [
     { name: 'Engineering', count: 8, icon: '💻' },
     { name: 'Design', count: 5, icon: '🎨' },
@@ -115,14 +64,29 @@ const Team = () => {
 
   return (
     <div className="pt-20">
-      <section className="gradient-bg text-white py-20">
-        <div className="section-container">
+      <section className="relative gradient-bg text-white py-20 overflow-hidden">
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-10 right-10 w-64 h-64 bg-white rounded-full blur-3xl"></div>
+          <div className="absolute bottom-10 left-10 w-64 h-64 bg-white rounded-full blur-3xl"></div>
+        </div>
+        <div className="section-container relative z-10">
           <div className="max-w-4xl mx-auto text-center">
+            <div className="flex justify-center gap-4 mb-6 flex-wrap">
+              <span className="px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-sm font-semibold flex items-center gap-2">
+                ⚡ Fast Delivery
+              </span>
+              <span className="px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-sm font-semibold flex items-center gap-2">
+                ✨ High Quality
+              </span>
+              <span className="px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-sm font-semibold flex items-center gap-2">
+                🚀 Innovation-Driven
+              </span>
+            </div>
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Our Team
+              Our Leadership
             </h1>
             <p className="text-xl md:text-2xl text-primary-100">
-              Meet the talented people behind our success
+              Expert leaders driving excellence in software development
             </p>
           </div>
         </div>
@@ -173,20 +137,34 @@ const Team = () => {
         <div className="section-container">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-4">
-              Our Departments
+              Our Core Values
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              21 talented professionals across different specializations
+              What makes us a leading software agency
             </p>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-6">
-            {departments.map((dept, index) => (
-              <div key={index} className="card p-6 text-center">
-                <div className="text-5xl mb-3">{dept.icon}</div>
-                <h3 className="font-bold text-gray-900 mb-1">{dept.name}</h3>
-                <p className="text-3xl font-bold text-primary-600">{dept.count}</p>
-              </div>
-            ))}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            <div className="card p-8 text-center">
+              <div className="text-6xl mb-4">⚡</div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-3">Fast Delivery</h3>
+              <p className="text-gray-600">
+                Rapid development cycles with agile methodologies. We deliver quality software faster than traditional agencies.
+              </p>
+            </div>
+            <div className="card p-8 text-center">
+              <div className="text-6xl mb-4">✨</div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-3">High Quality</h3>
+              <p className="text-gray-600">
+                Enterprise-grade code standards, comprehensive testing, and meticulous attention to detail in every project.
+              </p>
+            </div>
+            <div className="card p-8 text-center">
+              <div className="text-6xl mb-4">🎯</div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-3">Client-Focused</h3>
+              <p className="text-gray-600">
+                Your success is our priority. We work closely with you to ensure every solution exceeds expectations.
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -195,25 +173,18 @@ const Team = () => {
         <div className="section-container">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-4">
-              Meet the Team
+              Our Expertise
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Skilled professionals passionate about creating exceptional software
+              Talented professionals across different specializations
             </p>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-            {teamMembers.map((member, index) => (
-              <div key={index} className="card overflow-hidden text-center">
-                <img
-                  src={member.image}
-                  alt={member.name}
-                  className="w-full h-64 object-cover"
-                />
-                <div className="p-6">
-                  <h3 className="text-lg font-bold text-gray-900 mb-1">{member.name}</h3>
-                  <p className="text-primary-600 font-semibold text-sm mb-2">{member.role}</p>
-                  <p className="text-gray-600 text-sm">{member.expertise}</p>
-                </div>
+          <div className="grid grid-cols-2 md:grid-cols-5 gap-6">
+            {departments.map((dept, index) => (
+              <div key={index} className="card p-6 text-center">
+                <div className="text-5xl mb-3">{dept.icon}</div>
+                <h3 className="font-bold text-gray-900 mb-1">{dept.name}</h3>
+                <p className="text-3xl font-bold text-primary-600">{dept.count}</p>
               </div>
             ))}
           </div>
