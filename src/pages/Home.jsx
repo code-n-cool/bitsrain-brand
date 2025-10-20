@@ -114,11 +114,15 @@ const Home = () => {
 
   return (
     <div className="pt-20">
-      {/* Hero Section with Animated Background */}
-      <section className="relative gradient-bg text-white py-20 md:py-32 overflow-hidden">
-        <div className="absolute inset-0 opacity-20">
-          <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary-400 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-secondary-400 rounded-full blur-3xl animate-pulse delay-1000"></div>
+      {/* Hero Section with Image Background */}
+      <section className="relative text-white py-20 md:py-32 overflow-hidden">
+        <div className="absolute inset-0">
+          <img 
+            src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1920&h=1080&fit=crop" 
+            alt="Software Development"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-primary-900/95 via-primary-800/90 to-secondary-900/95"></div>
         </div>
         <div className="section-container relative z-10">
           <div className="max-w-4xl mx-auto text-center">
@@ -289,10 +293,14 @@ const Home = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-br from-primary-600 via-primary-700 to-secondary-600 text-white relative overflow-hidden">
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-1/4 left-1/3 w-96 h-96 bg-white rounded-full blur-3xl"></div>
-          <div className="absolute bottom-1/4 right-1/3 w-96 h-96 bg-white rounded-full blur-3xl"></div>
+      <section className="py-20 text-white relative overflow-hidden">
+        <div className="absolute inset-0">
+          <img 
+            src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1920&h=600&fit=crop" 
+            alt="Team Collaboration"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-primary-900/90 via-primary-800/85 to-secondary-900/90"></div>
         </div>
         <div className="section-container relative z-10">
           <div className="max-w-4xl mx-auto text-center">

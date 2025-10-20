@@ -163,10 +163,14 @@ const Services = () => {
 
   return (
     <div className="pt-20">
-      <section className="relative gradient-bg text-white py-20 overflow-hidden">
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-10 right-10 w-64 h-64 bg-white rounded-full blur-3xl"></div>
-          <div className="absolute bottom-10 left-10 w-64 h-64 bg-white rounded-full blur-3xl"></div>
+      <section className="relative text-white py-20 overflow-hidden">
+        <div className="absolute inset-0">
+          <img 
+            src="https://images.unsplash.com/photo-1504639725590-34d0984388bd?w=1920&h=600&fit=crop" 
+            alt="Software Services"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-primary-900/90 via-primary-800/85 to-secondary-900/90"></div>
         </div>
         <div className="section-container relative z-10">
           <div className="max-w-4xl mx-auto text-center">

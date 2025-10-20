@@ -145,8 +145,16 @@ const Blog = () => {
 
   return (
     <div className="pt-20">
-      <section className="gradient-bg text-white py-20">
-        <div className="section-container">
+      <section className="relative text-white py-20 overflow-hidden">
+        <div className="absolute inset-0">
+          <img 
+            src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=1920&h=600&fit=crop" 
+            alt="Blog & Insights"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-primary-900/90 via-primary-800/85 to-secondary-900/90"></div>
+        </div>
+        <div className="section-container relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
               Blog & Insights
