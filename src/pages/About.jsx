@@ -1,78 +1,67 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { FaLightbulb, FaStar, FaHandshake, FaRocket, FaBolt, FaMagic, FaTrophy } from 'react-icons/fa';
+import { FaLightbulb, FaHandshake, FaRocket, FaBolt, FaMagic, FaTrophy, FaShieldAlt } from 'react-icons/fa';
 
 const About = () => {
   const values = [
     {
-      title: 'Innovation First',
-      description: 'We stay ahead of technology trends to deliver cutting-edge solutions that give our clients a competitive advantage.',
+      title: 'Applied Research',
+      description: 'We turn emerging AI/ML breakthroughs into production-grade capabilities that solve real business problems.',
       icon: FaLightbulb,
     },
     {
-      title: 'Quality Excellence',
-      description: 'Every line of code we write undergoes rigorous testing and review to ensure the highest quality standards.',
-      icon: FaStar,
+      title: 'Responsible AI',
+      description: 'Safety guardrails, human oversight, and transparent evaluations are built into every engagement.',
+      icon: FaShieldAlt,
     },
     {
-      title: 'Client Partnership',
-      description: 'We believe in building long-term relationships based on trust, transparency, and mutual success.',
-      icon: FaHandshake,
-    },
-    {
-      title: 'Agile Approach',
-      description: 'Our flexible methodology allows us to adapt quickly to changing requirements and deliver value iteratively.',
+      title: 'Outcome Obsession',
+      description: 'Experiments, KPIs, and dashboards keep us focused on measurable lifts - not vanity demos.',
       icon: FaRocket,
+    },
+    {
+      title: 'Long-Term Partnership',
+      description: 'We build alongside your teams, leaving playbooks and enablement so AI keeps delivering after launch.',
+      icon: FaHandshake,
     },
   ];
 
   const milestones = [
-    { year: '2011', event: 'Company Founded', description: 'Started with a vision to transform software development' },
-    { year: '2014', event: 'First Healthcare Project', description: 'Launched our first HIPAA-compliant healthcare platform' },
-    { year: '2017', event: 'Fintech Expansion', description: 'Entered fintech market with secure payment solutions' },
-    { year: '2020', event: '100+ Projects', description: 'Reached milestone of 100 successful project deliveries' },
-    { year: '2023', event: 'AI Integration', description: 'Launched AI and machine learning practice division' },
-    { year: '2025', event: 'Global Presence', description: 'Serving clients across 25+ countries worldwide' },
+    { year: '2019', event: 'Founded as AI Studio', description: 'Started as a boutique focused on recommendation and analytics prototypes' },
+    { year: '2021', event: 'First Production Recommender', description: 'Launched real-time personalization for a digital commerce brand' },
+    { year: '2022', event: 'Content Intelligence Platform', description: 'Shipped multilingual content optimization with human-in-the-loop guardrails' },
+    { year: '2023', event: 'MLOps Practice', description: 'Standardized evaluation, monitoring, and compliance playbooks for AI workloads' },
+    { year: '2024', event: 'LLM Agents at Scale', description: 'Deployed RAG-powered support assistants across five markets' },
+    { year: '2025', event: '40+ Models in Production', description: 'Operating AI systems across content, recommendations, analytics, and automation' },
   ];
 
   const expertise = [
-    { name: 'React & React Native', level: 95 },
-    { name: 'Node.js & Python', level: 90 },
-    { name: 'Cloud Architecture (AWS/Azure)', level: 88 },
-    { name: 'AI & Machine Learning', level: 85 },
-    { name: 'DevOps & CI/CD', level: 92 },
-    { name: 'Mobile Development', level: 90 },
+    { name: 'LLM Engineering & RAG Systems', level: 93 },
+    { name: 'Recommendation Systems', level: 91 },
+    { name: 'Predictive Modeling & Forecasting', level: 90 },
+    { name: 'MLOps (MLflow, Kubernetes, CI/CD)', level: 90 },
+    { name: 'Data Engineering (dbt, Airflow)', level: 88 },
+    { name: 'Full-Stack for AI Products (Next.js/React)', level: 85 },
   ];
 
   return (
     <div className="pt-20">
       <section className="relative text-white py-20 overflow-hidden">
         <div className="absolute inset-0">
-          <img 
-            src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1920&h=600&fit=crop" 
-            alt="About Our Company"
+          <img
+            src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1920&h=600&fit=crop"
+            alt="About BitsRain AI"
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-primary-900/90 via-primary-800/85 to-secondary-900/90"></div>
         </div>
         <div className="section-container relative z-10">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="flex justify-center gap-4 mb-6 flex-wrap">
-              <span className="px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-sm font-semibold flex items-center gap-2">
-                <FaBolt /> Fast Delivery
-              </span>
-              <span className="px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-sm font-semibold flex items-center gap-2">
-                <FaMagic /> High Quality
-              </span>
-              <span className="px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-sm font-semibold flex items-center gap-2">
-                <FaTrophy /> Award-Winning
-              </span>
-            </div>
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              About BitsRain
+              About BitsRain AI
             </h1>
             <p className="text-xl md:text-2xl text-primary-100">
-              Transforming businesses through innovative software solutions since 2011
+              Applied AI/ML studio building personalization, analytics, and automation for content-rich brands
             </p>
           </div>
         </div>
@@ -87,13 +76,13 @@ const About = () => {
               </h2>
               <div className="space-y-4 text-gray-600 text-lg">
                 <p>
-                  Founded in 2011, BitsRain began with a simple mission: to help businesses leverage technology to achieve their goals. What started as a small team of passionate developers has grown into a full-service software development agency with expertise spanning multiple industries.
+                  BitsRain was born as an AI-first studio focused on turning machine learning research into products that matter. We cut our teeth on recommendation systems and predictive analytics, where measurable lifts are the only thing that counts.
                 </p>
                 <p>
-                  Over the years, we've had the privilege of working with startups, growing businesses, and established enterprises across healthcare, fintech, e-commerce, and SaaS sectors. Our commitment to excellence and innovation has earned us the trust of clients worldwide.
+                  Today we partner with product, marketing, and data teams to ship content intelligence, personalization, and automation platforms. Every engagement blends experimentation, robust engineering, and responsible AI practices.
                 </p>
                 <p>
-                  Today, we're proud to be a team of over 50 talented professionals, including developers, designers, project managers, and QA specialists, all dedicated to delivering exceptional software solutions that drive real business results.
+                  Our cross-functional team of ML engineers, data scientists, designers, and product strategists rally around one goal: deploy AI that improves the metrics you care about - and make it sustainable for your teams to run.
                 </p>
               </div>
             </div>
@@ -112,10 +101,10 @@ const About = () => {
         <div className="section-container">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-4">
-              Our Core Values
+              Our Principles
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              The principles that guide everything we do
+              How we build and operate production AI responsibly
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -170,7 +159,7 @@ const About = () => {
               Technical Expertise
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Mastery across modern technologies and frameworks
+              Depth across the AI stack, from data to front-end experiences
             </p>
           </div>
           <div className="max-w-3xl mx-auto space-y-6">
@@ -199,7 +188,7 @@ const About = () => {
               Ready to Work Together?
             </h2>
             <p className="text-xl text-gray-600 mb-8">
-              Let's build something amazing together
+              Let's build AI that your teams can launch, measure, and trust
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link to="/projects" className="btn-primary">
@@ -217,4 +206,3 @@ const About = () => {
 };
 
 export default About;
-

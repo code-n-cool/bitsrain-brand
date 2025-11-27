@@ -1,131 +1,111 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { FaHospital, FaChartLine, FaShoppingCart, FaCloud, FaLaptopCode, FaMobileAlt, FaGlobe, FaBrain, FaPalette, FaCog, FaCheckCircle, FaUsers, FaLightbulb, FaWrench, FaChartBar, FaBolt, FaMagic, FaShieldAlt } from 'react-icons/fa';
+import { FaChartLine, FaCloud, FaBrain, FaCog, FaUsers, FaLightbulb, FaWrench, FaChartBar, FaBolt, FaMagic, FaShieldAlt } from 'react-icons/fa';
 
 const Services = () => {
   const mainServices = [
     {
-      id: 'healthcare',
-      title: 'Healthcare Solutions',
-      icon: FaHospital,
-      description: 'HIPAA-compliant healthcare software that improves patient care and streamlines operations',
+      id: 'content-optimization',
+      title: 'Content Intelligence & Optimization',
+      icon: FaMagic,
+      description: 'Ship content that ranks and converts with LLM-assisted workflows and feedback loops.',
       features: [
-        'Electronic Health Records (EHR) systems',
-        'Telemedicine platforms',
-        'Patient portal development',
-        'Healthcare analytics and reporting',
-        'Medical device integration',
-        'HIPAA compliance consulting',
+        'Automated tagging, summarization, and metadata enrichment',
+        'SEO scoring, intent clustering, and topic coverage insights',
+        'Multilingual generation with brand-safe guardrails',
+        'A/B testing hooks for copy, layout, and CTAs',
+        'Editorial workflow automation and CMS integrations',
+        'Real-time performance feedback loops',
       ],
-      technologies: ['React', 'Node.js', 'FHIR', 'HL7', 'AWS', 'PostgreSQL'],
+      technologies: ['OpenAI/Anthropic', 'LangChain', 'Next.js', 'Vector DBs', 'Python', 'Airflow'],
     },
     {
-      id: 'fintech',
-      title: 'Fintech Development',
+      id: 'recommendations',
+      title: 'Recommendation Systems',
+      icon: FaBrain,
+      description: 'Personalization engines tuned for engagement, retention, and revenue KPIs.',
+      features: [
+        'User and item embeddings with real-time feature stores',
+        'Ranking pipelines combining content and behavioral signals',
+        'Contextual and session-based recommendations',
+        'A/B experimentation frameworks and guardrails',
+        'Cold-start strategies and catalog enrichment',
+        'Edge delivery for low-latency experiences',
+      ],
+      technologies: ['PyTorch/TensorFlow', 'Kafka', 'Redis', 'TypeScript', 'GraphQL', 'AWS/GCP'],
+    },
+    {
+      id: 'analytics',
+      title: 'Predictive Analytics & Insights',
       icon: FaChartLine,
-      description: 'Secure, scalable financial technology solutions that meet regulatory requirements',
+      description: 'Forward-looking analytics with explainability and decision support built in.',
       features: [
-        'Payment gateway integration',
-        'Banking applications',
-        'Investment platforms',
-        'Cryptocurrency solutions',
-        'Fraud detection systems',
-        'PCI DSS compliance',
+        'Churn, LTV, and propensity modeling for lifecycle marketing',
+        'Demand and revenue forecasting with anomaly detection',
+        'Attribution and marketing mix modeling',
+        'Customer journey analytics and cohorting',
+        'Executive dashboards with governed metrics layers',
+        'Data quality monitoring and alerting',
       ],
-      technologies: ['React Native', 'Python', 'Blockchain', 'MongoDB', 'Azure', 'Redis'],
+      technologies: ['dbt', 'Snowflake/BigQuery', 'Python', 'Time-series models', 'Metabase/Looker', 'Airflow'],
     },
     {
-      id: 'ecommerce',
-      title: 'E-commerce Platforms',
-      icon: FaShoppingCart,
-      description: 'High-performance e-commerce solutions that drive sales and enhance customer experience',
+      id: 'automation',
+      title: 'AI Agents & Workflow Automation',
+      icon: FaBolt,
+      description: 'Retrieval-augmented agents that resolve support, ops, and growth work with traceability.',
       features: [
-        'Custom e-commerce platforms',
-        'Multi-vendor marketplaces',
-        'Shopping cart development',
-        'Payment processing integration',
-        'Inventory management systems',
-        'Mobile commerce apps',
+        'RAG chat experiences with domain-aware retrieval',
+        'Orchestration across CRMs, helpdesks, and data warehouses',
+        'Human-in-the-loop review queues and approvals',
+        'Hallucination and safety guardrails with evaluations',
+        'Observability for latency, cost, and quality',
+        'Playbooks for onboarding, support deflection, and sales enablement',
       ],
-      technologies: ['Vue.js', 'Next.js', 'Shopify', 'WooCommerce', 'Stripe', 'MySQL'],
-    },
-    {
-      id: 'saas',
-      title: 'SaaS Products',
-      icon: FaCloud,
-      description: 'Cloud-based SaaS applications designed for scalability and performance',
-      features: [
-        'Multi-tenant architecture',
-        'Subscription management',
-        'API development',
-        'Real-time collaboration tools',
-        'Analytics dashboards',
-        'Third-party integrations',
-      ],
-      technologies: ['React', 'GraphQL', 'Kubernetes', 'Microservices', 'AWS', 'Docker'],
+      technologies: ['LLMs', 'LangChain', 'FastAPI', 'Pinecone', 'Docker/Kubernetes', 'OpenTelemetry'],
     },
   ];
 
   const additionalServices = [
     {
-      title: 'Custom Software Development',
-      description: 'Tailored solutions built from scratch to meet your unique business requirements',
-      icon: FaLaptopCode,
-    },
-    {
-      title: 'Mobile App Development',
-      description: 'Native and cross-platform mobile applications for iOS and Android',
-      icon: FaMobileAlt,
-    },
-    {
-      title: 'Web Development',
-      description: 'Modern, responsive web applications using the latest frameworks',
-      icon: FaGlobe,
-    },
-    {
-      title: 'Cloud Solutions',
-      description: 'Cloud migration, architecture design, and managed cloud services',
-      icon: FaCloud,
-    },
-    {
-      title: 'AI & Machine Learning',
-      description: 'Intelligent automation and predictive analytics powered by AI',
-      icon: FaBrain,
-    },
-    {
-      title: 'UI/UX Design',
-      description: 'User-centered design that creates engaging digital experiences',
-      icon: FaPalette,
-    },
-    {
-      title: 'DevOps & CI/CD',
-      description: 'Automated deployment pipelines and infrastructure management',
+      title: 'MLOps & Model Operations',
+      description: 'CI/CD for models, evaluation suites, feature stores, and production monitoring.',
       icon: FaCog,
     },
     {
-      title: 'Quality Assurance',
-      description: 'Comprehensive testing services to ensure bug-free software',
-      icon: FaCheckCircle,
+      title: 'Data Engineering & Warehousing',
+      description: 'Ingestion, dbt pipelines, data contracts, and unified metrics layers.',
+      icon: FaCloud,
     },
     {
-      title: 'Staff Augmentation',
-      description: 'Skilled developers to extend your in-house team capabilities',
-      icon: FaUsers,
+      title: 'Experimentation & CRO',
+      description: 'A/B testing design, feature flag rollouts, and uplift modeling.',
+      icon: FaChartBar,
     },
     {
-      title: 'Technical Consulting',
-      description: 'Expert guidance on technology strategy and architecture',
+      title: 'Analytics Engineering',
+      description: 'Self-serve dashboards, governed KPIs, and semantic layers for teams.',
+      icon: FaChartLine,
+    },
+    {
+      title: 'AI Readiness & Strategy',
+      description: 'Use-case discovery, ROI modeling, and responsible AI guidelines.',
       icon: FaLightbulb,
     },
     {
-      title: 'Maintenance & Support',
-      description: 'Ongoing support and enhancement of existing applications',
-      icon: FaWrench,
+      title: 'Security & Compliance',
+      description: 'PII handling, SOC2-ready controls, and red-team testing for AI systems.',
+      icon: FaShieldAlt,
     },
     {
-      title: 'Product Strategy',
-      description: 'Strategic planning and roadmap development for your product',
-      icon: FaChartBar,
+      title: 'Product Enablement',
+      description: 'Playbooks, training, and change management to operationalize AI.',
+      icon: FaUsers,
+    },
+    {
+      title: 'Lifecycle Automation',
+      description: 'Trigger-based journeys across marketing, sales, and support stacks.',
+      icon: FaWrench,
     },
   ];
 
@@ -177,20 +157,20 @@ const Services = () => {
           <div className="max-w-4xl mx-auto text-center">
             <div className="flex justify-center gap-4 mb-6 flex-wrap">
               <span className="px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-sm font-semibold flex items-center gap-2">
-                <FaBolt /> Fast Delivery
+                <FaBolt /> Production AI
               </span>
               <span className="px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-sm font-semibold flex items-center gap-2">
-                <FaMagic /> High Quality
+                <FaMagic /> Experiment Driven
               </span>
               <span className="px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-sm font-semibold flex items-center gap-2">
                 <FaShieldAlt /> Secure & Compliant
               </span>
             </div>
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Our Services
+              AI/ML Services
             </h1>
             <p className="text-xl md:text-2xl text-primary-100">
-              Comprehensive software development services tailored to your industry
+              Applied AI services for content optimization, personalization, analytics, and automation
             </p>
           </div>
         </div>
@@ -200,10 +180,10 @@ const Services = () => {
         <div className="section-container">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-4">
-              Industry-Specific Solutions
+              AI/ML Solution Areas
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Deep expertise in key industries with specialized knowledge and compliance requirements
+              From discovery to deployment, we design, build, and operate AI systems that move your metrics
             </p>
           </div>
           <div className="space-y-20">
@@ -281,7 +261,7 @@ const Services = () => {
               Additional Services
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Comprehensive technology services to support every aspect of your digital journey
+              Supporting capabilities to keep your AI products reliable, measurable, and secure
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
@@ -330,7 +310,7 @@ const Services = () => {
               Ready to Start Your Project?
             </h2>
             <p className="text-xl mb-8 text-primary-100">
-              Let's discuss how our services can help you achieve your business goals
+              Let's design, launch, and scale AI products that drive measurable outcomes
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link to="/contact" className="btn-primary bg-white text-primary-600 hover:bg-gray-100">

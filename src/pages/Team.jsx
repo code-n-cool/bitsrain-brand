@@ -6,16 +6,16 @@ const Team = () => {
   const leadership = [
     {
       name: 'Danny Liu',
-      role: 'CEO & Co-Founder',
-      bio: 'Visionary entrepreneur with a passion for innovative technology solutions. Leading BitsRain to deliver exceptional software that transforms businesses across industries.',
-      image: '/images/team/danny-liu.jpg',
+      role: 'Founder',
+      bio: 'Founder focused on applied AI products that drive measurable lifts for content-rich businesses.',
+      image: '/images/team/danny-liu.png',
       linkedin: 'https://linkedin.com/in/bitsrain',
       twitter: 'https://x.com/bitsrain',
     },
     {
       name: 'Kevin Kuhn',
-      role: 'CTO',
-      bio: 'Technical leader with expertise in scalable architecture and cutting-edge development practices. Drives our engineering excellence and technological innovation.',
+      role: 'Founder',
+      bio: 'Founder leading engineering strategy, MLOps rigor, and reliable delivery of production AI systems.',
       image: '/images/team/kevin-kuhn.png',
       linkedin: 'https://linkedin.com/in/bitsrain',
       twitter: 'https://x.com/bitsrain',
@@ -76,22 +76,11 @@ const Team = () => {
         </div>
         <div className="section-container relative z-10">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="flex justify-center gap-4 mb-6 flex-wrap">
-              <span className="px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-sm font-semibold flex items-center gap-2">
-                <FaBolt /> Fast Delivery
-              </span>
-              <span className="px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-sm font-semibold flex items-center gap-2">
-                <FaMagic /> High Quality
-              </span>
-              <span className="px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-sm font-semibold flex items-center gap-2">
-                <FaRocket /> Innovation-Driven
-              </span>
-            </div>
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
               Our Leadership
             </h1>
             <p className="text-xl md:text-2xl text-primary-100">
-              Expert leaders driving excellence in software development
+              Founders with deep roots in AI/ML, product strategy, and production delivery
             </p>
           </div>
         </div>
@@ -113,7 +102,7 @@ const Team = () => {
                 <img
                   src={leader.image}
                   alt={leader.name}
-                  className="w-48 h-48 rounded-full mx-auto mb-6 object-cover shadow-xl"
+                  className="w-48 h-48 rounded-full mx-auto mb-6 object-cover shadow-xl ring-4 ring-primary-50"
                 />
                 <h3 className="text-2xl font-bold text-gray-900 mb-2">{leader.name}</h3>
                 <p className="text-primary-600 font-semibold mb-4">{leader.role}</p>
@@ -142,32 +131,32 @@ const Team = () => {
         <div className="section-container">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-4">
-              Our Core Values
+              Principles
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              What makes us a leading software agency
+              How we build durable, production-ready AI systems
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            <div className="card p-8 text-center">
-              <div className="text-6xl mb-4 text-primary-600"><FaBolt /></div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-3">Fast Delivery</h3>
+            <div className="card p-8 text-left">
+              <div className="text-3xl mb-4 text-primary-600"><FaBolt /></div>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Ship to Impact</h3>
               <p className="text-gray-600">
-                Rapid development cycles with agile methodologies. We deliver quality software faster than traditional agencies.
+                Rapid, evidence-based delivery with clear metrics and post-launch iteration.
               </p>
             </div>
-            <div className="card p-8 text-center">
-              <div className="text-6xl mb-4 text-primary-600"><FaMagic /></div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-3">High Quality</h3>
+            <div className="card p-8 text-left">
+              <div className="text-3xl mb-4 text-primary-600"><FaMagic /></div>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Responsible by Default</h3>
               <p className="text-gray-600">
-                Enterprise-grade code standards, comprehensive testing, and meticulous attention to detail in every project.
+                Guardrails, evaluations, and human oversight built into every AI workflow.
               </p>
             </div>
-            <div className="card p-8 text-center">
-              <div className="text-6xl mb-4 text-primary-600"><FaBullseye /></div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-3">Client-Focused</h3>
+            <div className="card p-8 text-left">
+              <div className="text-3xl mb-4 text-primary-600"><FaBullseye /></div>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Partner Mindset</h3>
               <p className="text-gray-600">
-                Your success is our priority. We work closely with you to ensure every solution exceeds expectations.
+                Playbooks, enablement, and handover so your teams can run AI sustainably.
               </p>
             </div>
           </div>
@@ -178,18 +167,18 @@ const Team = () => {
         <div className="section-container">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-4">
-              Our Expertise
+              Core Capabilities
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Talented professionals across different specializations
+              Specialized squads aligned to ship and operate AI products
             </p>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto">
             {departments.map((dept, index) => (
-              <div key={index} className="card p-6 text-center">
-                <div className="text-5xl mb-3 text-primary-600"><dept.icon /></div>
-                <h3 className="font-bold text-gray-900 mb-1">{dept.name}</h3>
-                <p className="text-3xl font-bold text-primary-600">{dept.count}</p>
+              <div key={index} className="card p-6 text-left">
+                <div className="text-3xl mb-3 text-primary-600"><dept.icon /></div>
+                <h3 className="font-semibold text-gray-900 mb-1">{dept.name}</h3>
+                <p className="text-xl font-bold text-primary-600">{dept.count} specialists</p>
               </div>
             ))}
           </div>
